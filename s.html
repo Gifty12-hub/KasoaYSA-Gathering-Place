@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="s.js">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="wrapper">
+    <nav>YSA</nav>
+      <h2 id="account">Register</h2>
+      <p id="required"><span class="ast"> *</span> Required information</p>
+    
+    
+    
+     <form name="signup" action="https://httpbin.org/post" method="post" onsubmit='return formValidation()' onreset="resetHandler();">
+    <div class="info">
+    
+        <h3>Basic Information</h3>
+        <!-- Email -->
+        <label for="email">Email <span class="ast"> *</span></label>
+        <input type="email" name="email" id="email" autofocus required/><span class="bar"></span><br>
+    
+        <!-- 1st Password -->
+        <label for="password">Password <span class="ast"> *</span></label>
+        <input type="password" name="password" id="password" required/><span class="bar"></span><br>
+        <div class="errors" id="password_error"></div>
+        <!-- 2nd Password -->
+        <label for="passcon">Required Password <span class="ast"> *</span></label>
+        <input type="password" name="passcon" id="passcon" required/><span class="bar"></span><br>
+        <div class="errors" id="passcon_error"></div>
+        <!-- First Name -->
+        <label for="first">First Name<span class="ast"> *</span></label>
+        <input type="text" name="first" id="first" required/><span class="bar"></span><br>
+        <div class="errors" id="first_error"></div>
+        <!-- Last Name -->
+        <label for="last">Last Name<span class="ast"> *</span></label>
+        <input type="text" name="last" id="last" required/><span class="bar"></span><br>
+        <div class="errors" id="last_error"></div>
+        <!-- Phone -->
+        <label for="phone">Phone Number<span class="ast"> *</span></label>
+        <input type="tel" name="phone" id="phone" placeholder="999-999-9999" required/><span class="bar"></span><br>
+        <div class="errors" id="phone_error"></div>
+        <!-- Address -->
+        <label for="address">Address<span class="ast"> *</span></label>
+        <input type="text" name="address" id="address" required/><span class="bar"></span><br>
+    
+        <!-- City -->
+        <label for="city">City<span class="ast"> *</span></label>
+        <input type="text" name="city" id="city" required/><span class="bar"></span><br>
+    
+        <!-- Province -->
+        <label for="province">Region<span class="ast"> *</span></label>
+        <select name="province" id="province" required><span class="bar"></span>
+          <option value="" disabled selected>Central Region</option>
+          <optgroup label="other regions">
+            <option value="AB">Greater Region</option>
+            <option value="BC">Eastern Regorn</option>
+            <option value="MB">Northern Regorn</option>
+            <option value="NB">Volta Region</option>
+            <option value="NL">Western Region</option>
+            <option value="NS">Ahafo Region</option>
+            <option value="ON">Ashanti Region</option>
+            <option value="PE">Brong Ahafo Region</option>
+            <option value="QC">Upper East Region</option>
+            <option value="SK">Other "please type if not added"</option>
+          </optgroup>
+          <optgroup label="additional">
+            <option value="NT">Upper West Region</option>
+            <option value="NU">Oti Region</option>
+            <option value="YT">BONO east</option>
+          </optgroup>
+        </select><br>
+        <div class="errors" id="province_error"></div>
+          <!-- Country -->
+         <label for="country">Country<span class="ast"> *</span></label>
+         <input type="text" name="country" id="country" list="countries" required/><span class="bar"></span>
+         <datalist id="countries">
+          <option value="GHANA"></option>
+          <option value="LIBERIA"></option>
+          <option value="NIGERIA"></option>
+          <option value="TOGO"></option>
+          <option value="IF YOUR COUNTRY IS NOT ADDED TYPE IT"></option>
+         </datalist>
+         <div class="errors" id="country_error"></div>
+    
+    
+    
+      </div>
+      <div class="education">
+    
+        <h3>Education</h3>
+        <!-- School -->
+        <label for="school">kasoa(YSA)<span class="ast"> *</span></label>
+        <input type="text" name="school" id="school" required/><span class="bar"></span><br>
+        <div class="errors" id="school_error"></div>
+        <!-- Program -->
+        <label for="program">Program<span class="ast"> *</span></label>
+        <input type="text" name="program" id="program" required/><span class="bar"></span><br>
+        <div class="errors" id="program_error"></div>
+        <!-- Education Level -->
+        <label for="education">Education Level<span class="ast"> *</span></label>
+        <select name="education" id="education" required ><span class="bar"></span>
+          <option value="" >-select-</option>
+          <option value="TD">Technical Diploma</option>
+          <option value="CD">College Diploma</option>
+          <option value="BD">Bachelor's Degree</option>
+          <option value="MD">Master's Degree</option>
+          <option value="O">Others</option>
+        </select><br>
+        <div class="errors" id="education_error"></div>
+        <!-- Education Status -->
+        <label class="empty">Education Status</label>
+        <fieldset>
+        <legend>Education Status</legend>
+          <input type="radio" name="edu" id="graduated"/>
+          <label for="graduated">Graduated</label><br />
+          <input type="radio" name="edu" id="enrolled"/>
+          <label for="enrolled">Currently Enrolled</label><br />
+          <input type="radio" name="edu" id="notgraduate"/>
+          <label for="notgraduate">Did Not Graduate</label><br />
+        </fieldset><span class="bar"></span><br>
+        <div class="errors" id="educationstatus_error"></div>
+        <!-- Graduation Date -->
+        <label for="graddate">DOB<span class="ast"> *</span></label>
+        <input type="date" name="graddate" id="graddate" required/><br>
+        <div class="errors" id="graddate_error"></div>
+    
+    
+      </div>
+      <div class="work">
+    
+        <h3>Work Experience</h3>
+        <!-- EMployer -->
+        <label for="employer">Employer</label>
+        <input type="text" id="employer"/><span class="bar"></span><br>
+        <!-- Job Title -->
+        <label for="jobtitle">Job Title</label>
+        <input type="text" id="jobtitle" /><span class="bar"></span><br>
+        <!-- Job Duty -->
+        <label for="jobduty">Job Duty</label>
+        <textarea id="jobduty"></textarea><span class="bar"></span><br>
+        <!-- Worked Years -->
+        <label for="workedyears">Worked Year</label>
+        <input type="number" max="20" min="1" id="workedyears"/><span class="bar"></span><br>
+    
+    
+      </div>
+      <div class="attachments">
+        <h3>Attachments</h3>
+        <label for="file">Attachments</label>
+        <input id="file" type="file"/>
+        <div class="buttons">
+    
+      <input type="reset" value="Reset"/>
+      <input type="submit"  value="Apply"/>
+      </div>
+      </div>
+    
+    
+    
+    
+      </form>
+    </div>
+    
+</body>
+</html>
