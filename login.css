@@ -1,0 +1,51 @@
+.header{
+    min-height:100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url(LP6.jpg);
+    background-position:center;
+    background-size: cover;
+    position:relative;
+}
+
+
+.card {
+    height: 330px;
+    margin-top: 2em;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+    }
+  
+  input {
+    border-width:0.1em;
+    height: 2em;
+    width: 15em;
+  }
+  input:hover {
+    border-color: black;
+    border-width: 0.2em;
+  }  
+  .loginfont1 {
+    margin-top: 4em;
+  }
+  button {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    background-color: rgba(0, 0, 255, 0);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: rgb(255, 0, 0);
+  }
+  fieldset {
+    margin-top:-12em;
+  }
+  legend {
+    text-align: center;
+  }
